@@ -4,6 +4,11 @@ import Navbar from '../templates/Navbar'
 import Sidebar from '../templates/Sidebar'
 
 function UploadRecord() {
+    const [file, setFile] = React.useState();
+
+    const onSumbit = () => {
+      console.log(file);
+    }
     return (
       <div id="wrapper">
           <Sidebar/>
@@ -21,7 +26,7 @@ function UploadRecord() {
                   style={{position: "relative", top: "-30px",  border: 
                   "1px black solid",display: 'block',
                   width: '200px'}}>
-                    <b className="text-uppercase text-dark">Upload Record</b>
+                    <b className="text-uppercase text-dark">Upload Files</b>
                   </span>
                   <div className="ml-5 p-2">
                     <div className="">
@@ -38,12 +43,16 @@ function UploadRecord() {
                           <option value="3">Resolution</option>
                         </select>
                       </div>
+                      <div className="mb-4">
+                        <label for="formGroupExampleInput" className="form-label ">AUTHOR</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="File Name" disabled/>
+                      </div>
                       <div class="mb-4">
                           <label for="formFile" class="form-label">ATTACHMENT</label>
-                          <input class="form-control" type="file" id="formFile"/>
+                          <input class="form-control" type="file" id="formFile" onChange={(e) => setFile(e.target.files)}/>
                         </div>
                         <div class="d-grid gap-2 mb-3">
-                          <button class="btn btn-success" type="button">SUBMIT</button>
+                          <button class="btn btn-success" type="button" onClick={onSumbit}>SUBMIT</button>
                         </div>
                   </div>
                 </div>

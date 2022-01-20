@@ -1,10 +1,9 @@
 import React from 'react'
-import Stats from '../templates/Stats'
 import Footer from '../templates/Footer'
 import Navbar from '../templates/Navbar'
 import Sidebar from '../templates/Sidebar'
 
-function Dashboard() {
+function ManageUser() {
 
     return (
       <div id="wrapper">
@@ -17,24 +16,13 @@ function Dashboard() {
             </div>
             <div className="container">
               
-            <div className="card mb-4 d-block">
-              <div className="card-body">
-                  <span className="card-title card text-center p-2"
-                  style={{position: "relative", top: "-30px",  border: 
-                  "1px black solid",display: 'block',
-                  width: '250px'}}>
-                    <b className="text-uppercase text-dark">Basic Information</b>
-                  </span>
-                  <Stats/>
-              </div>
-              </div>
               <div className="card mb-1 d-block">
               <div className="card-body">
               <span className="card-title card text-center p-2"
                   style={{position: "relative", top: "-30px",  border: 
                   "1px black solid",display: 'block',
                   width: '250px'}}>
-                    <b className="text-uppercase text-dark">Access your record</b>
+                    <b className="text-uppercase text-dark">Manage User</b>
                   </span>
                   <div className="row">
                     <div className="col-md-6 text-nowrap">
@@ -73,18 +61,20 @@ function Dashboard() {
                       <table className="table my-0" id="dataTable">
                         <thead>
                         <tr>
-                          <th scope="col">File Number</th>
+                          <th scope="col">ID</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Author</th>
                             <th scope="col">Type</th>
+                            <th scope="col">Date Created</th>
+                            <th scope="col">Date Updated</th>
                             <th scope="col">Action</th>
                           </tr>
                         </thead>
                         <tbody>
                         <th scope="row">1</th>
-                                  <td>Memo no. 1</td>
                                   <td>LBPascua</td>
-                                  <td>Memo</td>
+                                  <td>Admin</td>
+                                  <td>01/01/21 10:00AM</td>
+                                  <td>01/01/21 10:00AM</td>
                                   <td>
                                     <a href="/manage-record" ><i className="fas fa-users mr-4"/></a>
                                     <i className="fas fa-trash mr-4"/>
@@ -105,5 +95,5 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default ManageUser
 
