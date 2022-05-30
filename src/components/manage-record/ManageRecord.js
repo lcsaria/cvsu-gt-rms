@@ -20,7 +20,7 @@ function ManageRecord() {
             <span className="card-title card text-center p-2"
                   style={{position: "relative", top: "-30px",  border: 
                   "1px black solid",display: 'block',
-                  width: '200px'}}>
+                  width: '250px'}}>
                     <b className="text-uppercase text-dark">Manage Record</b>
                   </span>
         <div className="row">

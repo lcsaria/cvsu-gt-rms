@@ -8,6 +8,7 @@ function UploadRecord() {
 
     const onSumbit = () => {
       console.log(file);
+      alert("Record added");
     }
     return (
       <div id="wrapper">
@@ -25,7 +26,7 @@ function UploadRecord() {
                   <span className="card-title card text-center p-2"
                   style={{position: "relative", top: "-30px",  border: 
                   "1px black solid",display: 'block',
-                  width: '200px'}}>
+                  width: '250px'}}>
                     <b className="text-uppercase text-dark">Upload Files</b>
                   </span>
                   <div className="ml-5 p-2">
